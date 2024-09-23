@@ -1,7 +1,12 @@
-export default function Main() {
+/* eslint-disable */
+import './Main.css'
+
+function Main (props) {
     return (
-        <main>
-            <h1 className="main--header">Fun facts about react</h1>
+        <main 
+            className={props.darkMode ? 'dark': ''}
+        >
+            <h1 className="main--title">Fun facts about react</h1>
             <ul className="main--facts">
                 <li>Was first released in 2013</li>
                 <li>Was originally created by Jordan Walke</li>
@@ -12,3 +17,5 @@ export default function Main() {
         </main>
     );
 }
+
+export default Main
